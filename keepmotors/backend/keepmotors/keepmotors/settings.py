@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     'apps.membresia',
     'apps.salida',
     'apps.tarifas',
-    'apps.login'
+    'apps.login',
+    'apps.resgistro'
 ]
 
 MIDDLEWARE = [

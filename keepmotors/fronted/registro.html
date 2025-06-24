@@ -79,14 +79,24 @@
       var Correo= $("#correo")
     });
   });
-   $(document).ready(function () {
-    $(ajax({
-      type: "POST",
-      data: datos,
-      url: "http://127.0.0.1:8000/api/login/", 
-      success: function (valor) {
-        console.log (valor);
-      }
+      $("#registrar").click(function () {
+        var correo= $("#correo").val();
+        
+        var contraseña= $("#password").val();
+        
+        var datos= {
+          "correo": correo,
+          "contraseña": contraseña
+        };
 
-      }))})
+          $.ajax({
+            type: "POST",
+            data: datos,
+            url: "http://127.0.0.1:8000/api/login/", 
+            success: function (valor) {
+              console.log (valor);
+            }
+
+          });
+      });
 </script>
